@@ -1,0 +1,13 @@
+require 'redis'
+
+redis_host = ENV['REDIS_HOST'] || 'localhost'
+redis_port = ENV['REDIS_PORT'] || 6379
+
+# Create a new Redis connection
+redis = Redis.new(host: redis_host, port: redis_port)
+
+# Use the Redis connection in your application
+
+redis.set('redmine', 'redmine')
+value = redis.get('redmine')
+puts value
