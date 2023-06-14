@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: arn:aws:ecs:ap-southeast-1:951053526398:task-definition/blue-green-task-def:2
+        LoadBalancerInfo:
+          ContainerName: "redmine"
+          ContainerPort: 3000
