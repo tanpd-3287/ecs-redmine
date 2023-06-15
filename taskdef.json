@@ -15,33 +15,34 @@
                 }
             ],
             "essential": true,
-            "environment": [
-                {
-                    "name": "MYSQL_PASSWORD",
-                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-password"
-                },
-                {
-                    "name": "MYSQL_DB",
-                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-name"
-                },
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [
                 {
                     "name": "MYSQL_HOST",
                     "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-host"
                 },
                 {
+                    "name": "MYSQL_DATABASE",
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-name"
+                },
+                {
                     "name": "MYSQL_USER_NAME",
                     "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-username"
+                },
+                {
+                    "name": "MYSQL_PASSWORD",
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-password"
                 }
             ],
-            "environmentFiles": [],
-            "mountPoints": [],
-            "volumesFrom": [],
             "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/redmine/logs",
+                    "awslogs-group": "/ecs/blue-green-task-def",
                     "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -55,12 +56,10 @@
         "FARGATE"
     ],
     "cpu": "256",
-    "memory": "1024",
-    "ephemeralStorage": {
-        "sizeInGiB": 21
-    },
+    "memory": "512",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     }
 }
+
