@@ -1,5 +1,5 @@
 {
-    "family": "blue-green-task-def",
+    "family": "blue-green-task-definition",
     "containerDefinitions": [
         {
             "name": "redmine",
@@ -25,7 +25,7 @@
                     "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-host"
                 },
                 {
-                    "name": "MYSQL_DATABASE",
+                    "name": "MYSQL_DB",
                     "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-name"
                 },
                 {
@@ -42,7 +42,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/blue-green-task-def",
+                    "awslogs-group": "/ecs/blue-green-task-definition",
                     "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -57,6 +57,9 @@
     ],
     "cpu": "256",
     "memory": "512",
+    "ephemeralStorage": {
+        "sizeInGiB": 21
+    },
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
