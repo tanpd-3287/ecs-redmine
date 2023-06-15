@@ -18,19 +18,19 @@
             "environment": [
                 {
                     "name": "MYSQL_PASSWORD",
-                    "value": "h4BgW#68$K1700"
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-password"
                 },
                 {
                     "name": "MYSQL_DB",
-                    "value": "redmine"
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-name"
                 },
                 {
                     "name": "MYSQL_HOST",
-                    "value": "redmine.cmr1yjw3otk3.ap-southeast-1.rds.amazonaws.com"
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-host"
                 },
                 {
                     "name": "MYSQL_USER_NAME",
-                    "value": "redmine"
+                    "valueFrom": "arn:aws:ssm:ap-southeast-1:951053526398:parameter/ecs/redmine/mysql/database-username"
                 }
             ],
             "environmentFiles": [],
