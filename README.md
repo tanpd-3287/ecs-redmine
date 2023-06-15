@@ -1,2 +1,2 @@
-# Dockerize Ruby Apppppp 1234556666545645435fdfdfffdf
+# Dockerize Ruby app
 
