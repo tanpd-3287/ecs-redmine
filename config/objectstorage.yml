@@ -1,0 +1,6 @@
+production:
+  access_key_id: AKIA523ZVEV7GWTKCL7C
+  secret_access_key: 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
+  bucket: s3-end-point-svc
+  endpoint: vpce-091fad5ca07591025
+  #signature_version: 2 # some storage backends are compatible only with signature version 2
