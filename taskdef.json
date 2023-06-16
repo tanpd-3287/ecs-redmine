@@ -1,5 +1,5 @@
 {
-    "family": "blue-green-task-definition",
+    "family": "task-definition",
     "containerDefinitions": [
         {
             "name": "redmine",
@@ -42,7 +42,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/blue-green-task-definition",
+                    "awslogs-group": "/logs/taskdfn/ecs",
                     "awslogs-region": "ap-southeast-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -65,4 +65,5 @@
         "operatingSystemFamily": "LINUX"
     }
 }
+
 
