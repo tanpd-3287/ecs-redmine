@@ -1,4 +1,4 @@
-FROM ruby:2.7.2
+FROM public.ecr.aws/r1q1f0n9/blue-green
 WORKDIR /var/www/redmine
 COPY Gemfile* /var/www/redmine
 RUN bundle install
