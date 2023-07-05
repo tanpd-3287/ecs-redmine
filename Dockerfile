@@ -8,6 +8,6 @@ RUN cp config/database.yml.example config/database.yml
 RUN gem install mysql2
 EXPOSE 3000
 ENV RAILS_ENV=production
-RUN bundle exec rake generate_secret_token
+RUN rake generate_secret_token
 CMD RAILS_ENV=production rake db:migrate && bundle exec puma -C config/puma.rb
 
