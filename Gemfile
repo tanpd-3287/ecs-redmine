@@ -6,6 +6,7 @@ gem 'bundler', '>= 1.12.0'
 gem 'executable-hooks', '~> 1.6', '>= 1.6.1'
 gem 'rails', '5.2.8.1'
 gem 'redis'
+gem 'loofah', '~>2.19.1'
 gem 'sprockets', '~> 3.7.2' if RUBY_VERSION < '2.5'
 gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
 gem 'rouge', '~> 3.26.0'
