@@ -13,28 +13,27 @@
                 }
             ],
             "essential": true,
-            "environment": [],
             "mountPoints": [],
             "volumesFrom": [],
             "linuxParameters": {
                 "initProcessEnabled": true
             },
-            "secrets": [
+            "environment": [
                 {
-                    "name": "MYSQL_HOST",
-                    "valueFrom": "terraform-ecs-dev-mysql-instance.cqehacevsnai.ap-northeast-1.rds.amazonaws.com"
+                    "name": "MYSQL_PASSWORD",
+                    "value": "ylPJjOGx50bPGXJ"
                 },
                 {
                     "name": "MYSQL_DB",
-                    "valueFrom": "terraform-ecs-dev-mysql-instance"
+                    "value": "terraform-ecs-dev-mysql-instance"
+                },
+                {
+                    "name": "MYSQL_HOST",
+                    "value": "terraform-ecs-dev-mysql-instance.cqehacevsnai.ap-northeast-1.rds.amazonaws.com"
                 },
                 {
                     "name": "MYSQL_USER_NAME",
-                    "valueFrom": "redmine"
-                },
-                {
-                    "name": "MYSQL_PASSWORD",
-                    "valueFrom": "ylPJjOGx50bPGXJ"
+                    "value": "redmine"
                 }
             ],
             "logConfiguration": {
