@@ -7,6 +7,5 @@ RUN mkdir -p tmp/pids tmp/sockets public/plugin_assets
 RUN cp config/database.yml.example config/database.yml
 EXPOSE 3000
 ENV RAILS_ENV=production
-RUN gem install mysql2
 CMD RAILS_ENV=production rake db:migrate && bundle exec puma -C config/puma.rb
 
