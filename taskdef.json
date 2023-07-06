@@ -25,7 +25,7 @@
                 },
                 {
                     "name": "MYSQL_DB",
-                    "value": "terraform-ecs-dev-mysql-instance"
+                    "value": "redmine"
                 },
                 {
                     "name": "MYSQL_HOST",
