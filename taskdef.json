@@ -18,22 +18,22 @@
             "linuxParameters": {
                 "initProcessEnabled": true
             },
-            "environment": [
+            "secret": [
                 {
                     "name": "MYSQL_PASSWORD",
-                    "value": "ylPJjOGx50bPGXJ"
+                    "valueFrom": "MYSQL_PASSWORD"
                 },
                 {
                     "name": "MYSQL_DB",
-                    "value": "redmine"
+                    "valueFrom": "MYSQL_DB"
                 },
                 {
                     "name": "MYSQL_HOST",
-                    "value": "terraform-ecs-dev-mysql-instance.cqehacevsnai.ap-northeast-1.rds.amazonaws.com"
+                    "valueFrom": "MYSQL_HOST"
                 },
                 {
                     "name": "MYSQL_USER_NAME",
-                    "value": "redmine"
+                    "valueFrom": "MYSQL_USER_NAME"
                 }
             ],
             "logConfiguration": {
