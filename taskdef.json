@@ -18,7 +18,7 @@
             "linuxParameters": {
                 "initProcessEnabled": true
             },
-            "secret": [
+            "secrets": [
                 {
                     "name": "MYSQL_PASSWORD",
                     "valueFrom": "MYSQL_PASSWORD"
