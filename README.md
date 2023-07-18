@@ -1,2 +1,2 @@
-# Dockerize Ruby apppp
+# Dockerize Ruby app
 
