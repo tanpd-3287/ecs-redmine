@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:763517810021:task-definition/terraform-ecs-dev-web-task-definition:12",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:763517810021:task-definition/terraform-ecs-dev-web-task-definition:26",
     "containerDefinitions": [
         {
             "name": "redmine",
